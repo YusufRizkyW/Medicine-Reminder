@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History - IoT Medicine Reminder</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigasi -->
+        <nav class="sidebar">
+            <div class="logo">
+                <p>Medicine Reminder</p>
+            </div>
+            <ul>
+                <li><a href="../index.php"><i class="icon-home"></i>Home</a></li>
+                <li><a href="create.html"><i class="icon-alarm"></i>Create</a></li>
+                <li><a href="alarm_list.html"><i class="icon-alarm"></i> Daftar Alarm</a></li>
+                <li><a href="history.html" class="active"><i class="icon-history"></i>History</a></li>
+                <li><a href="data.html"><i class="icon-data"></i>Data</a></li>
+                <li><a href="../logout.php"><i class="icon-logout"></i>Log Out</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Konten Utama -->
+    <div class="main-content">
+        <h1>Riwayat Alarm</h1>
+
+            <div class="button-container">
+                <button id="delete-all-history" class="delete-btn">Hapus Semua Riwayat</button>
+                <button id="refresh-history" class="refresh-btn">Refresh</button>
+            </div>
+            
+
+        <table id="history-table" border="1">
+            <thead>
+                <tr>
+                    <th style="color: white;">Waktu Alarm</th>
+                    <th style="color: white;">Obat</th>
+                    <th style="color: white;">Hari Aktif</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data akan dimuat dari fetch_history.php -->
+            </tbody>
+        </table>
+    </div>
+</script>
+</body>
+</html>

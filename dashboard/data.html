@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualisasi Data Pengambilan Obat</title>
+    <!-- Sertakan Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="data.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <!-- Navigasi Sidebar -->
+            <div class="logo">
+                <p>Medicine Reminder</p>
+            </div>
+            <ul>
+                <li><a href="../index.php"><i class="icon-home"></i>Home</a></li>
+                <li><a href="create.html"><i class="icon-alarm"></i>Create</a></li>
+                <li><a href="alarm_list.html"><i class="icon-alarm"></i>Daftar Alarm</a></li>
+                <li><a href="history.html"><i class="icon-history"></i>History</a></li>
+                <li><a href="data.html"><i class="icon-data"></i>Data</a></li>
+                <li><a href="../logout.php"><i class="icon-logout"></i>Log Out</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <h1>Data Frekuensi Pengambilan Obat</h1>
+        
+        <!-- Form untuk memilih rentang tanggal -->
+        <form id="dateRangeForm">
+            <label for="startDate">Tanggal Mulai:</label>
+            <input type="date" id="startDate" name="startDate" required>
+            
+            <label for="endDate">Tanggal Akhir:</label>
+            <input type="date" id="endDate" name="endDate" required>
+            
+            <button type="submit">Tampilkan Grafik</button>
+        </form>
+        
+        <!-- Kontainer untuk grafik -->
+        <canvas id="medicineChart"></canvas>
+    </div>
+</body>
+</html>

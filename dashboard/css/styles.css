@@ -1,0 +1,327 @@
+/* CSS Umum untuk Semua Halaman */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9fafb; /* Warna latar yang lebih lembut */
+    color: #333333; /* Warna teks yang lebih netral */
+}
+
+.container {
+    display: flex;
+}
+
+/* Sidebar Navigasi */
+.sidebar {
+    width: 20%;
+    background-color: #2a3d45;
+    color: #ffffff;
+    height: 100vh; /* Menggunakan 100vh agar penuh layar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Menempatkan tombol logout di bagian bawah */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Memungkinkan scroll jika konten melebihi tinggi layar */
+}
+
+.sidebar .logo {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1; /* Memungkinkan bagian menu mengembang */
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #1d2a30;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    transition: background-color 0.3s, padding 0.3s;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #1d2a30;
+    padding-left: 15px;
+}
+
+.icon-home,
+.icon-alarm,
+.icon-history,
+.icon-data,
+.icon-logout {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+/* Konten Utama */
+.main-content {
+    margin-left: 25%;
+    padding: 20px;
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+h1, h2 {
+    color: #2a3d45; /* Warna judul yang seragam */
+    margin-bottom: 20px;
+}
+
+.main-content .upcoming-alarm p {
+    font-size: 1.2em;
+}
+
+/* Style untuk container Next Coming Alarm */
+.next-alarm-container {
+    background-color: #f0f4f8; /* Warna background yang lembut */
+    border: 1px solid #d3dce6; /* Border dengan warna abu-abu */
+    padding: 20px;
+    border-radius: 10px; /* Membuat sudut menjadi bulat */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    margin-top: 20px;
+    max-width: 600px; /* Maksimal lebar container */
+    margin-left: auto; 
+    margin-right: auto; /* Centerkan container */
+}
+
+/* Style untuk judul */
+.next-alarm-container h2 {
+    color: #2c3e50; /* Warna teks */
+    font-size: 24px; /* Ukuran font judul */
+    margin-bottom: 15px;
+    font-weight: bold; /* Membuat teks tebal */
+}
+
+/* Style untuk waktu sekarang */
+.current-time {
+    font-size: 18px;
+    color: #34495e; /* Warna abu gelap */
+    margin-bottom: 10px;
+}
+
+/* Style untuk alarm yang akan datang */
+.upcoming-alarm {
+    font-size: 18px;
+    color: #16a085; /* Warna hijau */
+    font-weight: 500;
+}
+
+
+/* Gaya Umum untuk Tombol */
+button {
+    padding: 12px 24px;
+    background-color: #3498db; /* Warna biru yang seragam untuk tombol */
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #2980b9; /* Warna hover yang lebih gelap */
+    transform: translateY(-2px);
+}
+
+/* Kontainer List Alarm */
+.alarm-list-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.alarm-item {
+    background-color: #ffffff;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-left: 5px solid #3498db; /* Aksen warna biru */
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.alarm-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.alarm-item p {
+    margin: 5px 0;
+    color: #2a3d45;
+    font-size: 16px;
+}
+
+/* Tombol Delete Khusus di Daftar Alarm */
+.delete-btn {
+    background-color: #e74c3c; /* Warna merah untuk tombol delete */
+    color: #ffffff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b; /* Warna hover merah lebih gelap */
+}
+
+/* Gaya Tombol Logout */
+.logout-btn {
+    background-color: #e67e22;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    text-align: center;
+    text-decoration: none;
+    margin: 20px;
+    margin-top: auto; /* Menempatkan di bagian paling bawah */
+}
+
+.logout-btn:hover {
+    background-color: #d35400; /* Warna hover oranye lebih gelap */
+}
+
+/* Gaya Responsif untuk Layar Lebih Kecil (Handphone dan Tablet) */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+    
+    .main-content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+        padding: 15px;
+    }
+
+    .sidebar ul li a {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sidebar {
+        width: 160px;
+    }
+
+    .main-content {
+        margin-left: 160px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+}
+
+/* Form Rentang Tanggal */
+#dateRangeForm {
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+}
+
+#dateRangeForm label {
+    margin-right: 10px;
+    color: #2a3d45;
+    font-weight: bold;
+}
+
+#dateRangeForm input {
+    margin-right: 15px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Gaya Chart untuk Menampilkan Data Obat */
+#medicineChart {
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Tabel History */
+#history-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+#history-table thead {
+    background-color:  #2a3d45;
+    color: #ffffff;
+}
+
+#history-table th, 
+#history-table td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #e0e0e0;
+    color: #2a3d45;
+}
+
+#history-table tbody tr:nth-child(even) {
+    background-color: #f4f7f8;
+}
+
+#history-table tbody tr:hover {
+    background-color: #e6f2ff;
+}
+
+/* Tombol Hapus Semua Riwayat */
+#delete-all-history {
+    background-color: #e74c3c;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-bottom: 20px;
+}
+
+#delete-all-history:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+
+

@@ -1,0 +1,183 @@
+/* Container utama */
+.container {
+    display: flex;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    height: 100vh; /* Memastikan tinggi 100% viewport */
+}
+
+/* Sidebar Navigasi */
+.sidebar {
+    width: 250px;
+    background-color: #2a3d45;
+    color: #ffffff;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar .logo {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-bottom: 1px solid #1d2a30;
+    letter-spacing: 1px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #1d2a30;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #1d2a30;
+    cursor: pointer;
+}
+
+.icon-home,
+.icon-alarm,
+.icon-history,
+.icon-data,
+.icon-logout {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+/* Konten Utama */
+.main-content {
+    margin-left: 250px;
+    padding: 40px 20px;
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.main-content h1 {
+    font-size: 2em;
+    color: #2a3d45;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #dcdcdc;
+    padding-bottom: 10px;
+}
+
+/* Form Styling */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    font-size: 1.1em;
+    color: #2a3d45;
+}
+
+form input[type="time"],
+form input[type="text"],
+form select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+form input[type="time"]:focus,
+form input[type="text"]:focus,
+form select:focus {
+    border-color: #2a3d45;
+    outline: none;
+}
+
+form input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+form button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #2a3d45;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+    font-size: 1.1em;
+    box-sizing: border-box;
+}
+
+form button:hover {
+    background-color: #1d2a30;
+    transform: scale(1.02);
+}
+
+/* Responsive Styling */
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .sidebar ul li {
+        text-align: center;
+    }
+
+    .sidebar ul li a {
+        justify-content: center;
+    }
+}

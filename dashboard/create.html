@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Alarm - IoT Medicine Reminder</title>
+    <link rel="stylesheet" href="create-style.css">
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <h2>Medicine Reminder</h2>
+            </div>
+            <ul>
+                <li><a href="../index.php"><i class="icon-home"></i>Home</a></li>
+                <li><a href="create.html"><i class="icon-alarm"></i>Create</a></li>
+                <li><a href="alarm_list.html"><i class="icon-alarm"></i> Daftar Alarm</a></li> <!-- Item Baru -->
+                <li><a href="history.html"><i class="icon-history"></i>History</a></li>
+                <li><a href="data.html"><i class="icon-data"></i>Data</a></li>
+                <li><a href="../logout.php"><i class="icon-logout"></i>Log Out</a></li> <!-- Logout link -->
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <h1>Buat Alarm Baru</h1>
+        <form id="alarmForm" action="src/create_simpan_alarm.php" method="POST">
+            <label for="time">Waktu Alarm :</label>
+            <br>
+            <input type="time" id="time" name="time" required>
+
+            <label for="medicine">Masukkan Nama Obat :</label>
+            <br>
+            <input type="text" id="medicine" name="medicine" placeholder="Enter medicine name" required>
+
+            <br>
+            <label for="days">Pilih Hari Aktif :</label>
+            <br>
+            <div>
+                <input type="checkbox" name="days[]" value="Senin"> Senin
+                <input type="checkbox" name="days[]" value="Selasa"> Selasa
+                <input type="checkbox" name="days[]" value="Rabu"> Rabu
+                <input type="checkbox" name="days[]" value="Kamis"> Kamis
+                <input type="checkbox" name="days[]" value="Jumat"> Jumat
+                <input type="checkbox" name="days[]" value="Sabtu"> Sabtu
+                <input type="checkbox" name="days[]" value="Minggu"> Minggu
+            </div>
+            <button type="submit">Simpan Alarm</button>
+        </form>
+    </div>
+</body>
+</html>
