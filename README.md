@@ -1,1 +1,32 @@
 # Medicine-Reminder
+Create medicine database
+and create this table on the medicine database
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `name` varchar(70) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+COMMIT;
+
+CREATE TABLE alarms (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    time TIME NOT NULL,
+    medicine VARCHAR(50) NOT NULL,
+    days VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE alarm_history (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    time TIME NOT NULL,
+    medicine VARCHAR(50) NOT NULL,
+    days VARCHAR(100) NOT NULL
+);
+
