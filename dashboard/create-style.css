@@ -1,39 +1,45 @@
-/* Container utama */
+/* CSS Umum untuk Semua Halaman */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9fafb; /* Warna latar yang lebih lembut */
+    color: #333333; /* Warna teks yang lebih netral */
+}
+
 .container {
     display: flex;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    height: 100vh; /* Memastikan tinggi 100% viewport */
+    
 }
 
 /* Sidebar Navigasi */
 .sidebar {
-    width: 250px;
+    width: 20%;
     background-color: #2a3d45;
     color: #ffffff;
-    height: 100vh;
+    height: 100vh; /* Menggunakan 100vh agar penuh layar */
     position: fixed;
     top: 0;
     left: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    justify-content: space-between; /* Menempatkan tombol logout di bagian bawah */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Memungkinkan scroll jika konten melebihi tinggi layar */
 }
 
 .sidebar .logo {
     padding: 20px;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: bold;
-    border-bottom: 1px solid #1d2a30;
-    letter-spacing: 1px;
+    color: #ffffff;
 }
 
 .sidebar ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    flex-grow: 1; /* Memungkinkan bagian menu mengembang */
 }
 
 .sidebar ul li {
@@ -46,13 +52,15 @@
     color: #ffffff;
     display: flex;
     align-items: center;
-    font-size: 16px;
-    transition: background-color 0.3s;
+    font-size: 1.2em;
+    transition: background-color 0.3s, padding 0.3s;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .sidebar ul li a:hover {
     background-color: #1d2a30;
-    cursor: pointer;
+    padding-left: 15px;
 }
 
 .icon-home,
@@ -66,18 +74,15 @@
 
 /* Konten Utama */
 .main-content {
-    margin-left: 250px;
-    padding: 40px 20px;
-    width: calc(100% - 250px);
+    margin-left: 25%;
+    padding: 20px;
     min-height: 100vh;
     background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
 }
 
-.main-content h1 {
-    font-size: 2em;
-    color: #2a3d45;
+/* Judul di Halaman */
+h1, h2 {
+    color: #2a3d45; /* Warna judul yang seragam */
     margin-bottom: 20px;
     border-bottom: 2px solid #dcdcdc;
     padding-bottom: 10px;
@@ -91,7 +96,7 @@ form {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     max-width: 600px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 form label {
@@ -131,7 +136,7 @@ form input[type="checkbox"] {
 form button {
     margin-top: 20px;
     padding: 12px 20px;
-    background-color: #2a3d45;
+    background-color: #3498db; /* Konsistensi warna biru */
     color: white;
     border: none;
     border-radius: 5px;
@@ -143,12 +148,12 @@ form button {
 }
 
 form button:hover {
-    background-color: #1d2a30;
+    background-color: #2980b9;
     transform: scale(1.02);
 }
 
-/* Responsive Styling */
-@media only screen and (max-width: 768px) {
+/* Gaya Responsif untuk Layar Lebih Kecil */
+@media screen and (max-width: 768px) {
     .sidebar {
         width: 200px;
     }
@@ -158,9 +163,13 @@ form button:hover {
         width: calc(100% - 200px);
         padding: 20px;
     }
+
+    .sidebar ul li a {
+        font-size: 1em;
+    }
 }
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 480px) {
     .sidebar {
         width: 100%;
         height: auto;
@@ -173,11 +182,8 @@ form button:hover {
         padding: 20px;
     }
 
-    .sidebar ul li {
-        text-align: center;
-    }
-
-    .sidebar ul li a {
-        justify-content: center;
+    button {
+        font-size: 12px;
+        padding: 8px 15px;
     }
 }

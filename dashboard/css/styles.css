@@ -228,12 +228,15 @@ button:hover {
 
 @media screen and (max-width: 480px) {
     .sidebar {
-        width: 160px;
+        width: 100%;
+        height: auto;
+        position: relative;
     }
 
     .main-content {
-        margin-left: 160px;
-        padding: 10px;
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
     }
 
     button {
@@ -322,6 +325,9 @@ button:hover {
     background-color: #c0392b;
     transform: translateY(-2px);
 }
+
+
+
 
 
 
